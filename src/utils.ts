@@ -95,6 +95,11 @@ export function getParentKey(opts: { id: string; queue: string }): string {
     return `${opts.queue}:${opts.id}`;
   }
 }
+export function getParentId(opts: { id: string; queue: string }): string {
+  if (opts) {
+    return `${opts.id}`;
+  }
+}
 
 export function jobIdForGroup(
   jobOpts: JobsOptions,
