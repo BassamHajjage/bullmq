@@ -90,13 +90,9 @@ export async function removeAllQueueData(
   });
 }
 
-export function getParentKey(opts: { id: string; queue: string }): object {
+export function getParentKey(opts: { id: string; queue: string }): string {
   if (opts) {
-    // return `${opts.queue}:${opts.id}`;
-    return {
-      queue: ${opts.queue},
-      id: ${opts.id}
-    };
+    return `${opts.queue}:${opts.id}`;
   }
 }
 
