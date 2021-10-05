@@ -177,7 +177,6 @@ export class Job<T = any, R = any, N extends string = string> {
 
     job.id = await job.addJob(client, {
       parentKey: job.parentKey,
-      parentId: job.parentId,
       parentDependenciesKey: job.parentKey
         ? `${job.parentKey}:dependencies`
         : '',
